@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+
+    <!-- http://flexboxgrid.com/  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+
+
+    <style>
+
+        body {
+            margin: 0;
+            width: 152mm;
+            height: 109mm;
+            font-family: 'Lato', cursive;
+        }
+
+        .sheet {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /** Paper sizes **/
+        body .sheet {
+            width: 152mm;
+            height: 109mm;
+            background: url(https://res.cloudinary.com/lifebot/image/upload/c_scale,w_1000/v1510828654/background_postcard_miss_you_recto_ezkrhq.png) no-repeat 50% 50%;
+            background-size: cover;
+        }
+
+        /** For screen preview **/
+        /* When converting the HTML to PDF only the media "print" is use so @media screen is only for previewing in the browser */
+        @media screen {
+            body {
+                background: #e0e0e0
+            }
+
+            .sheet {
+                background: white;
+                box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+                margin: 5mm;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+
+            line-height: 1.4;
+            font-size: 23px;
+            font-weight: 400;
+            color: white;
+            overflow: hidden;
+        }
+
+        .content .text-1 {
+            position: absolute;
+            top: 130px;
+            left: 30px;
+            margin: 0;
+
+        }
+
+        .content .text-2 {
+            position: absolute;
+            top: 330px;
+            left: 140px;
+            margin: 0;
+
+        }
+
+        .arrow {
+            position: absolute;
+            top: 328px;
+            left: 500px;
+            margin: 0;
+        }
+
+        .arrow img {
+            width: 60px;
+        }
+        .heart {
+            position: absolute;
+            top: 60px;
+            left: 360px;
+            margin: 0;
+        }
+
+        .heart img {
+            width: 160px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        #logo > img {
+            width: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+    <div id="logo">
+        <img src="https://res.cloudinary.com/lifebot/image/upload/v1510665652/logo_blanc_hj6wzh.png" alt="">
+    </div>
+    <div class="content">
+        <div class="text-1">
+            {{PRENOM}},
+            <br/>
+            vous nous manquez...
+
+        </div>
+        <div class="heart">
+            <img src="https://res.cloudinary.com/lifebot/image/upload/v1510828654/coeurs_icon_n2mqni.png" alt="">
+        </div>
+        <div class="text-2">
+            Nous avons une suprise pour vous.
+        </div>
+        <div class="arrow">
+            <img src="https://res.cloudinary.com/lifebot/image/upload/v1510829071/fleches_icons_postcard_mcv1h2.png" alt="">
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

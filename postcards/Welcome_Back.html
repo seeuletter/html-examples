@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+
+
+    <style>
+
+        body {
+            margin: 0;
+            width: 152mm;
+            height: 109mm;
+            font-family: 'Indie Flower', cursive;
+            color: #21314D;
+        }
+
+        img {
+            /* https://stackoverflow.com/a/42216003/2633092 */
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .sheet {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /** Paper sizes **/
+        body .sheet {
+            width: 152mm;
+            height: 109mm;
+        }
+
+        /** For screen preview **/
+        @media screen {
+            body {
+                background: #e0e0e0
+            }
+
+            .sheet {
+                background: white;
+                box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+                margin: 5mm;
+            }
+        }
+
+        /* Helper Classes */
+
+        #address {
+            border-left: 2px dashed rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 120px;
+            left: 300px;
+            height: 55mm;
+            width: 240px;
+        }
+
+        #address p {
+            font-size: 20px;
+            margin-left: 40px;
+            margin-top: 10px;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #address p:first-child {
+            margin-top: 30px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+        }
+
+        #logo img {
+            width: 60px;
+        }
+
+        .content {
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            width: 260px;
+        }
+
+        .content p {
+            margin: 0;
+            line-height: 1.3;
+            text-align: justify;
+            font-size: 15px;
+
+        }
+
+        .content .signature {
+            float: right;
+            margin-top: 10px;
+        }
+
+
+    </style>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+    <div id="logo">
+        <img src="https://res.cloudinary.com/lifebot/image/upload/v1505913415/logo_bleu_grand_xd5tfw.png" alt="">
+    </div>
+
+    <div class="content">
+        <p>
+            Bonjour {{FIRSTNAME}},
+            <br/>
+            <br/>
+            Nous sommes ravis de vous compter parmi nos clients !
+            <br/>
+            <br/>
+            Pour vous souhaiter la bienvenue, voici une réduction de {{MONTANT}}, valable sur votre prochaine commande.
+            <br/>
+            <br/>
+            {{CODE_PROMO_BIENVENUE}}
+            <br/>
+            <br/>
+            Pour en profiter c’est ici :
+            {{SHORT_URL_BIENVENUE}}
+            <br/>
+            A bientôt,
+
+        </p>
+        <p class="signature">
+            Raphaël de Seeuletter
+        </p>
+    </div>
+
+    <div id="address">
+        <p>
+            {{name}}
+        </p>
+        <p>
+            {{address_line1}}
+        </p>
+        <p>
+            {{address_postalcode}} {{address_city}}
+        </p>
+        <p>
+            {{address_country}}
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

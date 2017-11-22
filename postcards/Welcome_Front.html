@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+
+
+    <style>
+
+        body {
+            margin: 0;
+            width: 152mm;
+            height: 109mm;
+            font-family: 'Lato', cursive;
+        }
+
+        .sheet {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /** Paper sizes **/
+        body .sheet {
+            width: 152mm;
+            height: 109mm;
+            background: url(https://res.cloudinary.com/lifebot/image/upload/c_scale,w_800/v1510774091/background_postcard_welcome_recto_laoqov.png) no-repeat 50% 50%;
+            background-size: cover;
+        }
+
+        /** For screen preview **/
+        /* When converting the HTML to PDF only the media "print" is use so @media screen is only for previewing in the browser */
+        @media screen {
+            body {
+                background: #e0e0e0
+            }
+
+            .sheet {
+                background: white;
+                box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+                margin: 5mm;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content p {
+            line-height: 1.4;
+            font-size: 45px;
+            text-align: center;
+            font-weight: 900;
+            color: rgb(33, 49, 77);
+            margin: 0 0 0 220px;
+        }
+
+        #logo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #logo > img {
+            width: 90px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+    <div id="logo">
+        <img src="https://res.cloudinary.com/lifebot/image/upload/c_scale,w_393/v1505913415/logo_bleu_grand_xd5tfw.png" alt="">
+    </div>
+    <div class="content">
+        <p>
+            Welcome
+            <br/>
+            {{PRENOM}}
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
