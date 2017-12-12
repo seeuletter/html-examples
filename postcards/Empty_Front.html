@@ -29,13 +29,13 @@
         }
 
         .background {
-            /*AJOUTER ICI L'URL D'UNE IMAGE DE FOND*/
-            background: url('') no-repeat 50% 50%;
+            /* AJOUTER ICI L'URL D'UNE IMAGE DE FOND */
+            background: url("/** AJOUTER ICI L'URL D'UNE IMAGE DE FOND **/") no-repeat 50% 50%;
             background-size: cover;
         }
 
         /** For screen preview **/
-        /* When converting the HTML to PDF only the media "print" is use so @media screen is only for previewing in the browser */
+        /* When converting the HTML to PDF only the media "print" is used so @media screen is only for previewing in the browser */
         @media screen {
             body {
                 background: #e0e0e0
@@ -52,11 +52,20 @@
             width: 100%;
             height: 100%;
 
-            line-height: 1.4;
-            font-size: 23px;
-            font-weight: 400;
-            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             overflow: hidden;
+        }
+
+        .content p {
+            margin: 0;
+            line-height: 1.4;
+            font-size: 35px;
+            text-align: center;
+            font-weight: 900;
+            color: rgb(33, 49, 77);
         }
 
     </style>
@@ -64,9 +73,12 @@
 
 <body>
 
-<div class="sheet background">
+<div class="sheet">
 
-    <div class="content">
+    <div class="content background">
+        <p>
+            Recto
+        </p>
     </div>
 
 </div>
